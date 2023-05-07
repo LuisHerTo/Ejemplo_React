@@ -1,2 +1,10 @@
 # Ejemplo_React
-Demo de React, esto tendra el contenido de la pratica
+La primera función en el código es Square, que es un componente React que se encarga de renderizar un cuadrado en el tablero. Este componente recibe dos propiedades: value, que es el valor que se mostrará en el cuadrado ('X', 'O', o nulo), y onSquareClick, que es una función que se ejecutará cuando el cuadrado se haga clic.
+
+La siguiente función es Board, que es el componente principal que representa el tablero del juego. Utiliza dos hooks de React: useState, que se utiliza para mantener el estado de la aplicación. La variable xIsNext se utiliza para realizar un seguimiento de cuál es el siguiente jugador, y la variable squares es una matriz que mantiene el estado del tablero. Al comienzo del juego, xIsNext se establece en true, lo que significa que el primer jugador será 'X', y el array squares se inicializa con nueve valores nulos.
+
+La función handleClick es la que maneja el clic del usuario en un cuadrado del tablero. Esta función se llama cada vez que se hace clic en un cuadrado, y se asegura de que no se realicen cambios en el tablero si alguien ha ganado o si el cuadrado ya tiene un valor. Si el cuadrado está vacío y nadie ha ganado todavía, la función actualiza el estado del cuadrado con el valor del jugador actual ('X' o 'O') y cambia el turno al siguiente jugador.
+
+El siguiente bloque de código determina si hay un ganador en el juego, y lo almacena en la variable winner. La función calculateWinner verifica si alguna de las ocho líneas posibles de tres cuadrados tiene los mismos valores ('X' o 'O'). Si lo hace, devuelve el valor ('X' o 'O') del jugador que ganó. De lo contrario, devuelve null.
+
+En el bloque return, el componente Board devuelve una serie de elementos HTML que representan el tablero y el estado actual del juego. La variable status indica quién es el próximo jugador si nadie ha ganado todavía, o quién ganó el juego. Se muestran nueve componentes Square que representan cada uno de los cuadrados del tablero. Cada componente Square recibe un valor del array squares y una función handleClick que se ejecutará cuando se haga clic en el cuadrado.
