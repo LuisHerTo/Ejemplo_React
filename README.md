@@ -1,2 +1,2 @@
 # Ejemplo_React
-React
+Demo de React, esto tendra el contenido de la pratica
